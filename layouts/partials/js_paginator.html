@@ -31,7 +31,7 @@
         const continueReadingStr = '{{ i18n "continueReading" | safeJS }}'
         const summ = `<div class="articlePreview">
             <p>${article.summary}</p>
-            <p><a href="${article.link}">${continueReadingStr} </a></p>
+            <p><a href="${article.link}">${continueReadingStr} </a></p>
         </div>`
         {{ else }}
         const summ = ''
@@ -46,7 +46,7 @@
                     <a href="${article.link}">${article.title}</a>
                 </h2>
                 <p class="date">
-                    <span title='${dateStr}'> </span>
+                    <span title='${dateStr}'>󰃭 </span>
                     ${article.date}
                     ${tags}
                 </p>
