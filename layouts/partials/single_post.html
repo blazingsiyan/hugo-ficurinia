@@ -7,6 +7,10 @@
         <p class="date">
             <span title='{{ i18n "date" }}'> </span>
             {{- partial "date.html" .Date -}}
+            {{- if ne (.Date | time.Format "Jan 02, 2006 3:04 PM Z07:00") (.Lastmod.Format "Jan 02, 2006 3:04 PM Z07:00")
+            -}}
+            (updated: {{- partial "date.html" .Lastmod -}})
+            {{ end }}
         </p>
     {{ end }}
     {{ if and (.Params.toc | default false) (.Site.Params.tocBeforeImage | default false) }}

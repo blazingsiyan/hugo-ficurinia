@@ -258,6 +258,8 @@ Every post can have various parameters in the frontmatter, here are some that yo
 
 - `title`: the title of the article
 - `date`: usually automatically populated, holds the date and time of the post creation
+- `lastmod`: if set, will display alongside the original date to signify when the post
+  was last updated
 - `description`: a brief description of the post, useful for SEO optimization
 - `tags`: an array of tags, useful for searching similar articles
 - `image`: a link to a feature image for the article, shown in the preview as well
