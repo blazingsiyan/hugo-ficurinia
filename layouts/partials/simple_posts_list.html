@@ -27,7 +27,10 @@
                     </span>
                     <span>
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </span>
+                        {{- if ne (.Date | time.Format "Jan 02, 2006 3:04 PM Z07:00") (.Lastmod.Format "Jan 02, 2006 3:04 PM Z07:00")
+                        -}}
+                        &nbsp;(updated: {{- partial "date.html" .Lastmod -}})
+                        {{ end }}                    </span>
                 </div>
             </li>
         {{ end }}
