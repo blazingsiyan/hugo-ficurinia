@@ -4,7 +4,7 @@
         <div id="titleContainer">
             {{ if not (.Site.Params.logoRightOfTitle | default false) }}
                 <a class="unstyledLink" href="/">
-                    <img src='{{ .Site.Params.Logo | default "/logo.svg" }}' alt='{{ .Site.Params.LogoAltText | default "Logo" }}'/>
+                    <img src='{{ .Site.Params.Logo | default "/logo.svg" | relURL }}' alt='{{ .Site.Params.LogoAltText | default "Logo" }}'/>
                 </a>
             {{ end }}
             <div class="rightOfLogo">
@@ -12,7 +12,7 @@
                     <h1>
                         <a class="unstyledLink" href="/">{{ .Site.Title | default "Ficurinia" }}</a>
                         {{ if .Site.Params.logoRightOfTitle | default false }}
-                            <img src='{{ .Site.Params.Logo | default "/logo.svg" }}' alt='{{ .Site.Params.LogoAltText | default "Logo" }}'/>
+                            <img src='{{ .Site.Params.Logo | default "/logo.svg" | relURL }}' alt='{{ .Site.Params.LogoAltText | default "Logo" }}'/>
                         {{ end }}
                     </h1>
                     {{ if (.Site.Params.mobileHamburgerNav | default false) }}
